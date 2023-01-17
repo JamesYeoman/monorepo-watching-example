@@ -1,0 +1,40 @@
+{
+  "name": "@mwe/app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && REACT_APP_VERSION=$npm_package_version vite build && printf $npm_package_version > ./build/version"
+  },
+  "dependencies": {
+    "@mwe/shared": "workspace:*",
+    "react": "^17.x.x",
+    "react-dom": "^17.x.x"
+  },
+  "devDependencies": {
+    "@mwe/config": "workspace:*",
+    "@types/node": "^16.18.3",
+    "@types/react": "^17.x.x",
+    "@types/react-dom": "^17.x.x",
+    "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.x.x",
+    "eslint-config-react-app": "^7.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.x.x",
+    "vite": "^3.x.x"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "not IE 11",
+    "not android <= 4.4.4"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}
